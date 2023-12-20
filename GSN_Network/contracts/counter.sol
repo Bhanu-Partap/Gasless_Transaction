@@ -1,9 +1,11 @@
 // contracts/Counter.sol
-pragma solidity ^0.5.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.12;
 
-import "@openzeppelin/contracts-ethereum-package/contracts/GSN/GSNRecipient.sol";
+// import "https://github.com/frankenstien-831/openzeppelin-contracts-ethereum-package/blob/master/contracts/GSN/GSNRecipient.sol";
+import "@openzeppelin/contracts-ethereum-package/contracts/GSN/GSNRecipient.sol";   
 
-contract Counter is GSNRecipient {
+contract Counter is GSNRecipientUpgradeSafe {
     uint256 public value;
 
     function increase() public {
@@ -20,14 +22,15 @@ contract Counter is GSNRecipient {
         uint256 nonce,
         bytes calldata approvalData,
         uint256 maxPossibleCharge
-    ) external view returns (uint256, bytes memory) {
+    ) external  view  override returns (uint256, bytes memory) {
         return _approveRelayedCall();
     }
 
     // We won't do any pre or post processing, so leave _preRelayedCall and _postRelayedCall empty
-    function _preRelayedCall(bytes memory context) internal returns (bytes32) {
+    function _preRelayedCall(bytes memory context) internal override returns (bytes32) {
     }
 
-    function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal {
+    function _postRelayedCall(bytes memory context, bool, uint256 actualCharge, bytes32) internal override{
     }
 }
+
