@@ -1040,17 +1040,11 @@
     "evmVersion": "petersburg"
   },
   "networks": {
-    "1703056382165": {
+    "1703152627604": {
       "links": {},
       "events": {},
-      "address": "0xb3Cf17071a558a0e68996E5564A875A6FC66D63C",
-      "updated_at": 1703063672886
-    },
-    "1703074522260": {
-      "links": {},
-      "events": {},
-      "address": "0x64AabAC2eAA2DC77b3b6Ed8387E7BabD025cF215",
-      "updated_at": 1703074756974
+      "address": "0xea6240D80077283e0225233b86899c19E212415F",
+      "updated_at": 1703152899052
     }
   }
 }

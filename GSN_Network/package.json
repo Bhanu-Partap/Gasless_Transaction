@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.1",
-    "@openzeppelin/network": "^0.4.3"
+    "@openzeppelin/network": "^0.4.3",
+    "url": "^0.11.3"
   },
   "devDependencies": {
     "@openzeppelin/cli": "^2.8.2",
